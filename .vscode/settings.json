@@ -1,0 +1,22 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "eslint.validate": ["javascript", "javascriptreact"],
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    ".next": true,
+    "build": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "yarn.lock": true,
+    ".next": true,
+    "build": true,
+    "public": true
+  },
+  "eslint.alwaysShowStatus": true
+}

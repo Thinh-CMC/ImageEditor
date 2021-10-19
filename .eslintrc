@@ -1,0 +1,59 @@
+{
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react",
+    "airbnb",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "react",
+    "simple-import-sort",
+    "eslint-plugin-import-order-alphabetical",
+    "testing-library",
+    "jest-dom",
+    "jest"
+  ],
+  "globals": {
+    "localStorage": "writable",
+    "sessionStorage": "writable"
+  },
+  "parserOptions": {
+    "project": "./jsconfig.json",
+    "sourceType": "module"
+  },
+  "rules": {
+    "import/extensions": ["error", "never"],
+    "semi": ["error", "always"],
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",
+    "linebreak-style": 0,
+    "import/prefer-default-export": "off",
+    "no-console": "off",
+    "react/prop-types": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "react/react-in-jsx-scope": "off",
+    "max-classes-per-file": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": "off",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "no-unused-expressions": "off",
+    "import/no-unresolved": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-param-reassign": "off"
+  }
+}
