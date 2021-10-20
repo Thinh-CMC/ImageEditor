@@ -1,5 +1,7 @@
 import './App.scss';
 
+import Menu from 'layout/Menu/Menu';
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Menu />
     </div>
   );
 }
