@@ -5,14 +5,15 @@ import styles from './Menu.module.scss';
 const Menu = () => {
   const [active, _setActive] = useState('select');
   const MenutItem = [
-    { icon: 'Eraser', label: 'eraser' },
-    { icon: 'Folder', label: 'folder' },
-    { icon: 'Layer', label: 'layer' },
-    { icon: 'Pen', label: 'pen' },
-    { icon: 'Rectangle', label: 'Rectangle' },
     { icon: 'Select', label: 'select' },
-    { icon: 'Stamp', label: 'stamp' },
     { icon: 'TextSelect', label: 'Text select' },
+    { icon: 'Rectangle', label: 'Rectangle' },
+    { icon: 'Text', label: 'Text' },
+    { icon: 'Pen', label: 'pen' },
+    { icon: 'Stamp', label: 'stamp' },
+    { icon: 'Eraser', label: 'eraser' },
+    { icon: 'Layer', label: 'layer' },
+    { icon: 'Folder', label: 'folder' },
   ];
 
   const path = process.env.PUBLIC_URL;

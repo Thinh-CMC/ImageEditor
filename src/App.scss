@@ -1,1 +1,6 @@
-@import 'assets/styles/global'
+@import 'assets/styles/global';
+
+.App-body {
+  display: flex;
+  flex-direction: row;
+}
