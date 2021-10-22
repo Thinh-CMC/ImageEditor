@@ -5,13 +5,21 @@
   flex-direction: row;
   justify-content: center;
   background-color: #dedede;
+  width: 1132px;
+  height: 100vh;
 }
 .imgPreview {
   margin-top: 16px;
-  margin-left: 16px;
   width: 542px;
   height: 880px;
   background-color: #ffffff;
+}
+.imgEdit {
+  margin-top: 16px;
+  background-color: #ffffff;
+  width: 542px;
+  height: 880px;
+  margin-left: 10px;
 }
 .imgText {
   font-weight: 500;
@@ -21,8 +29,27 @@
   color: #353535;
   margin: 30px 0 29px 24px;
 }
-.img {
-  width: 494px;
+.imgUpload {
+  width: 515px;
   height: 774px;
   margin-left: 24px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.imgUpload img {
+  width: 100%;
+  object-fit: cover;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #f4f4f4;
 }

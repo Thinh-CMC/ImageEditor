@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 import styles from './Menu.module.scss';
 
-const Menu = () => {
+const Menu = ({ onClick }) => {
   const [active, _setActive] = useState('select');
   const MenutItem = [
     { icon: 'Select', label: 'select' },
-    { icon: 'TextSelect', label: 'Text select' },
+    { icon: 'TextSelect', label: 'Text select', action: onClick },
     { icon: 'Rectangle', label: 'Rectangle' },
     { icon: 'Text', label: 'Text' },
     { icon: 'Pen', label: 'pen' },
@@ -17,11 +17,12 @@ const Menu = () => {
   ];
 
   const path = process.env.PUBLIC_URL;
-  const menuitemelement = MenutItem.map((item) => (
+  const menuItemElement = MenutItem.map((item) => (
     <div
       key={`${item.label}`}
       onClick={() => {
         _setActive(item.label);
+        item.action();
       }}
       className={`${styles.MenuItem} ${
         active === item.label ? styles.MenuItemActive : ''
@@ -36,7 +37,7 @@ const Menu = () => {
       <label className={styles.MenuItemText}>{item.label}</label>
     </div>
   ));
-  return <div className={styles.Menu}>{menuitemelement}</div>;
+  return <div className={styles.Menu}>{menuItemElement}</div>;
 };
 
 export default Menu;
