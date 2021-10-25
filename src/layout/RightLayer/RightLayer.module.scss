@@ -15,3 +15,31 @@
   padding-top: 24px;
   padding-left: 24px;
 }
+.inputContainer {
+  height: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dedede;
+}
+.index {
+  font-family: $fontFamilyBase;
+  margin-left: 10px;
+}
+.line {
+  width: 100%;
+  border-bottom: 1px solid #dedede;
+  margin-top: 10px;
+}
+.input {
+  font-family: $fontFamilyBase;
+  margin-left: 10px;
+  height: 70%;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid #dedede;
+  &:focus {
+    border-bottom-color: blue;
+  }
+}

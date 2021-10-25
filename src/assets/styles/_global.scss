@@ -32,3 +32,8 @@ h4 {
   font-weight: 400;
   line-height: (21.72 / $df-fs) * $rem;
 }
+input {
+  &:focus-visible {
+    outline: none;
+  }
+}

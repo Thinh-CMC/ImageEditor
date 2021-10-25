@@ -7,22 +7,39 @@ import Menu from 'layout/Menu/Menu';
 import Main from 'layout/Main/Main';
 import RightLayer from 'layout/RightLayer/RightLayer';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [arrTexts, setArrTexts] = useState([]);
+  const [imgSrc, setstate] = useState([]);
   const textSelect = () => {
     axios
-      .get('http://localhost:9000/testApi', {
+      .get('http://localhost:9000/textDetect', {
         params: {
-          imgSrc:
-            'http://52.78.18.151:3000//ada3628a-da95-41e3-abab-33706a15af0c//scroll_001.jpg',
+          imgSrc: imgSrc[0],
         },
       })
       .then((res) => {
-        setArrTexts(res.data.description);
+        setArrTexts(res.data.data);
       });
   };
+
+  useEffect(() => {
+    axios
+      .get(
+        'http://52.78.18.151:8001/tool_episode/ada3628a-da95-41e3-abab-33706a15af0c',
+        {
+          headers: {
+            Authorization:
+              'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGZjZDE3YzktMGIzNC00MDg5LWFlNDMtMmEzOTJjNzUxM2U3IiwiYXVkIjoiZmFzdGFwaS11c2VyczphdXRoIiwiZXhwIjoxNjM1MTcyOTE5fQ.RCCS8MsGiabM3fcNhxg18MW5hCPmcY3gH7ASoDXczXM',
+          },
+        },
+      )
+      .then((res) => {
+        setstate(res.data.data[0].image_list);
+      });
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -37,7 +54,7 @@ function App() {
           <LeftLayer />
         </div>
         <div className="Image-editor">
-          <Main />
+          <Main imgSrc={imgSrc} />
         </div>
         <div className="right-menu">
           <RightLayer arrTexts={arrTexts} />
