@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react';
-import { Stage, Layer, Text, Image } from 'react-konva';
+import { Stage, Layer, Image } from 'react-konva';
 import useImage from 'use-image';
 import styles from './Main.module.scss';
 
@@ -28,7 +28,7 @@ const EditImage = ({ src }) => {
 function Main({ imgSrc }) {
   const path = process.env.PUBLIC_URL;
 
-  const imageSrc =
+  let imageSrc =
     imgSrc && imgSrc.length ? imgSrc[2] : `${path}/placeholder_image.png`;
   return (
     <div className={styles.container}>
