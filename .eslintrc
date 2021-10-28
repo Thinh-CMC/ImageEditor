@@ -56,7 +56,7 @@
     "jsx-a11y/anchor-is-valid": "off",
     "no-param-reassign": "off",
     "no-unused-vars": [
-      "error",
+      "off",
       { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
     ]
   }

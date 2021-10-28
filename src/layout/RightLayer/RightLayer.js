@@ -8,7 +8,7 @@ function RightLayer({ arrTexts }) {
       <div className={styles.textHeader}>Layer</div>
       <div className={styles.line} />
       {arrTexts.map((item, index) => (
-        <div className={styles.inputContainer} key={item.vertices}>
+        <div className={styles.inputContainer} key={item.index}>
           <span className={styles.index}>#{index + 1}</span>
           <input
             className={styles.input}

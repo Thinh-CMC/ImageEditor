@@ -16,7 +16,7 @@ function App() {
     axios
       .get('http://localhost:9000/textDetect', {
         params: {
-          imgSrc: imgSrc[0],
+          imgSrc: imgSrc[2],
         },
       })
       .then((res) => {
@@ -31,7 +31,7 @@ function App() {
         {
           headers: {
             Authorization:
-              'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiZGZjZDE3YzktMGIzNC00MDg5LWFlNDMtMmEzOTJjNzUxM2U3IiwiYXVkIjoiZmFzdGFwaS11c2VyczphdXRoIiwiZXhwIjoxNjM1MTcyOTE5fQ.RCCS8MsGiabM3fcNhxg18MW5hCPmcY3gH7ASoDXczXM',
+              'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiNWNhZTY1YmItOWY1Mi00NWRhLWI4YzQtMGUwODBhYmEzZjY5IiwiYXVkIjoiZmFzdGFwaS11c2VyczphdXRoIiwiZXhwIjoxNjM1NDI5OTUyfQ.CLieLM0oEvi97OraFIORa2YtBfT1QOiGETCyXUzeb4A',
           },
         },
       )

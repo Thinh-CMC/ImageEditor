@@ -5,8 +5,8 @@ import styles from './Menu.module.scss';
 const Menu = ({ onClick }) => {
   const [active, _setActive] = useState('select');
   const MenutItem = [
-    { icon: 'Select', label: 'select' },
-    { icon: 'TextSelect', label: 'Text select', action: onClick },
+    { icon: 'Select', label: 'select', action: onClick },
+    { icon: 'TextSelect', label: 'Text select' },
     { icon: 'Rectangle', label: 'Rectangle' },
     { icon: 'Text', label: 'Text' },
     { icon: 'Pen', label: 'pen' },
